@@ -26,7 +26,7 @@ public class Categorias {
 	@Size(min = 2, max = 100, message = "O tipo deve conter no mínimo 2 e no máximo 100 caracteres")
 	private String tipo;
 	
-	@OneToMany(mappedBy = "categorias", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "categorias", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("categorias")
 	private List<Produtos> produtos;
 
